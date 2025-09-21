@@ -117,3 +117,4 @@ any secrets found in infected systems.
 ## References
 
 - <https://unit42.paloaltonetworks.com/npm-supply-chain-attack/>
+- <https://safedep.io/npm-supply-chain-attack-targeting-maintainers/>
