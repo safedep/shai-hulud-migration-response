@@ -47,8 +47,8 @@ If you believe you are affected by this attack, follow the steps below:
 
 ### Indicators of Compromise (IoCs)
 
-1. Malicious package versions [data/ioc/malicious-package-versions.jsonl](iocs/malicious-package-versions.jsonl)
-2. Malicious payload hashes [data/ioc/malicious-payload-hashes.jsonl](iocs/malicious-payload-hashes.jsonl)
+1. Malicious package versions [data/ioc/malicious-package-versions.jsonl](data/ioc/malicious-package-versions.jsonl)
+2. Malicious payload hashes [data/ioc/malicious-payload-hashes.jsonl](data/ioc/malicious-payload-hashes.jsonl)
 
 ### Scanning for Malicious Package Versions
 
