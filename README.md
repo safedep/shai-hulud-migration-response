@@ -70,6 +70,14 @@ Run a full file system scan using `vet` and create an `sqlite3` database of all 
 > Enrichment is explicitly disabled for this scan because malicious package versions
 > are already known from the IOC list.
 
+> [!TIP]
+> You can optionally set the `WORKSPACE_DIR` environment variable to specify a custom directory for storing scan results. If not set, `/tmp` will be used by default.
+>
+> ```bash
+> export WORKSPACE_DIR=/path/to/your/workspace
+> ./scripts/pv-scan.sh
+> ```
+
 Run the query script to query the generated database for known malicious package versions:
 
 ```bash
@@ -85,6 +93,12 @@ Run the script to scan the file system for files matching known malicious payloa
 
 ```bash
 ./scripts/pv-payload-hash-scan.sh
+```
+
+Optionally, you can specify a custom path to scan instead of the entire filesystem:
+
+```bash
+./scripts/pv-payload-hash-scan.sh /path/to/scan
 ```
 
 ## Credential Rotation
