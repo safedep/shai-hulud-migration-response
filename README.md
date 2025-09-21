@@ -33,7 +33,7 @@ of the attack and the payload can be found in the [SafeDep Incident Report](http
 
 ## Response Steps
 
-If you believe you are affected by this attack, please follow these steps:
+If you believe you are affected by this attack, follow the steps below:
 
 1. Scan your systems for indicators of compromise (IoCs) listed below
 2. Rotate credentials available in compromised systems
@@ -84,6 +84,33 @@ Run the script to scan the file system for files matching known malicious payloa
 ```bash
 ./scripts/pv-payload-hash-scan.sh
 ```
+
+## Credential Rotation
+
+The malicious payload delivered through the attack compromised credentials
+available in the infected systems. Rotate all known credentials, particularly
+the following:
+
+- Npm credentials available in `$HOME/.npmrc` or `$NPM_TOKEN` environment variable
+- GitHub credentials of developers using affected systems
+- AWS credentials available in `$HOME/.aws/credentials` or
+  `$AWS_ACCESS_KEY_ID` and `$AWS_SECRET_ACCESS_KEY` environment variables
+- AWS credentials available in AWS Secrets Manager that were accessible from
+  affected systems
+- Google Cloud credentials and credentials stored in Google Cloud Secret Manager
+  that were accessible from affected systems
+- SSH private keys, especially if they were passwordless
+
+The malicious payload also used [TruffleHog](https://github.com/trufflesecurity/trufflehog) to extract
+secrets from source code repositories available in the infected system. Consider running TruffleHog and rotating
+any secrets found in infected systems.
+
+## Setup Guardrails
+
+- Install [SafeDep vet](https://github.com/safedep/vet) or similar tools to scan open source packages
+  for malicious code before merging pull requests or deploying code.
+- Install [SafeDep pmg](https://github.com/safedep/pmg) or similar tools to prevent installation of
+  malicious packages in developer machines.
 
 ## References
 
