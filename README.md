@@ -64,8 +64,9 @@ Run a full file system scan using `vet` and create an `sqlite3` database of all 
 ./scripts/pv-scan.sh
 ```
 
-[!NOTE]: Enrichment is explicitly disabled for this scan because malicious package versions
-are already known from the IOC list.
+> [!NOTE]
+> Enrichment is explicitly disabled for this scan because malicious package versions
+> are already known from the IOC list.
 
 Run the query script to query the generated database for known malicious package versions:
 
@@ -75,7 +76,8 @@ Run the query script to query the generated database for known malicious package
 
 ### Scanning for Malicious Payloads
 
-[!WARNING]: Scanning for payload hashes is compute intensive and may take a long time to complete.
+> [!WARNING]
+> Scanning for payload hashes is compute intensive and may take a long time to complete.
 
 Run the script to scan the file system for files matching known malicious payload hashes:
 
