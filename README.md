@@ -9,6 +9,8 @@
     - [Indicators of Compromise (IoCs)](#indicators-of-compromise-iocs)
     - [Scanning for Malicious Package Versions](#scanning-for-malicious-package-versions)
     - [Scanning for Malicious Payloads](#scanning-for-malicious-payloads)
+  - [Credential Rotation](#credential-rotation)
+  - [Setup Guardrails](#setup-guardrails)
   - [References](#references)
   <!--toc:end-->
 
