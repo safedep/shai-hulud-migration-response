@@ -132,3 +132,4 @@ any secrets found in infected systems.
 
 - <https://unit42.paloaltonetworks.com/npm-supply-chain-attack/>
 - <https://safedep.io/npm-supply-chain-attack-targeting-maintainers/>
+- <https://socket.dev/blog/ongoing-supply-chain-attack-targets-crowdstrike-npm-packages>
